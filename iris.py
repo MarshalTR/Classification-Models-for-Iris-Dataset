@@ -96,7 +96,7 @@ dt_cm = confusion_matrix(y_test, dt_pred)
 
 from sklearn.ensemble import RandomForestClassifier
 
-rf = RandomForestClassifier()
+rf = RandomForestClassifier(n_estimators=10, criterion='entropy')
 rf.fit(x_train, y_train)
 rf_pred = rf.predict(x_test)
 rf_cm = confusion_matrix(y_test, rf_pred)
