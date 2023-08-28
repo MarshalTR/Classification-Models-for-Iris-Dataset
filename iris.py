@@ -33,6 +33,9 @@ lr_cm = confusion_matrix(y_test, lr_pred)
 
 #According to the confusion matrix, our logistic regression model got 49 of the 50 data correctly.
 
+print('Logistic Regression')
+print(lr_cm)
+
 
 
 
@@ -45,7 +48,10 @@ knn.fit(x_train, y_train)
 knn_pred = knn.predict(x_test)
 knn_cm = confusion_matrix(y_test, knn_pred)
 
-#According to the confusion matrix, our KNN classifier model got 49 of the 50 data correctly.
+#According to the confusion matrix, our K-NN classifier model got 49 of the 50 data correctly.
+
+print('K-NN')
+print(knn_cm)
 
 
 
@@ -61,6 +67,9 @@ svm_cm = confusion_matrix(y_test, svm_pred)
 
 #According to the confusion matrix, our SVC with linear kernel model got all of the 50 data correctly.
 
+print('SVM')
+print(svm_cm)
+
 
 
 
@@ -68,12 +77,15 @@ svm_cm = confusion_matrix(y_test, svm_pred)
 
 from sklearn.naive_bayes import CategoricalNB
 
-gnb = CategoricalNB()
-gnb.fit(x_train, y_train)
-gnb_pred = gnb.predict(x_test)
-gnb_cm = confusion_matrix(y_test, gnb_pred)
+cnb = CategoricalNB()
+cnb.fit(x_train, y_train)
+cnb_pred = cnb.predict(x_test)
+cnb_cm = confusion_matrix(y_test, cnb_pred)
 
 #According to the confusion matrix, our Categorical Naive Bayes model got 49 of the 50 data correctly.
+
+print('Categorical Naive Bayes')
+print(cnb_cm)
 
 
 
@@ -89,6 +101,9 @@ dt_cm = confusion_matrix(y_test, dt_pred)
 
 #According to the confusion matrix, our decision tree model got 48 of the 50 data correctly.
 
+print('Decision Tree')
+print(dt_cm)
+
 
 
 
@@ -102,6 +117,10 @@ rf_pred = rf.predict(x_test)
 rf_cm = confusion_matrix(y_test, rf_pred)
 
 #According to the confusion matrix, our random forest model got 48 of the 50 data corectly.
+
+print('Random Forest')
+print(rf_cm)
+
 
 
 
